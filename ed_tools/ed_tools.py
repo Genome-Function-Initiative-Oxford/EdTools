@@ -54,7 +54,9 @@ class EdTool(object):
                 
                 alt = v.alleles[haplotype_index]
                 if  v.ref != seq[v.start + indent:v.stop + indent]:
-                    logging.warning("inconsistency", v.chrom, v.pos, v.ref, seq[v.start + indent:v.stop + indent])
+                    logging.warning(
+                        "inconsistency: {}:{} {} != {}".format(v.chrom, v.pos, v.ref, seq[v.start + indent:v.stop + indent])
+                    )
                 
                 seq = seq[:v.start + indent] + alt + seq[v.stop + indent:]
                 indent = indent + len(alt) - len(v.ref)
