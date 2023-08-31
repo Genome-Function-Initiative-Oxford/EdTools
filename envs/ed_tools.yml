@@ -1,0 +1,10 @@
+name: ed_tools
+channels:
+    - anaconda
+    - bioconda
+    - conda-forge
+    - defaults
+dependencies:
+    - python=3.9.10
+    - pysam
+    - snakemake=7.0.0
