@@ -1,11 +1,13 @@
-# EdTools
-BedTools style repository for passing VCF/BED files.
+# EDTools -- EvolvedDevelopmentTools
+
+BEDTools style repository for passing VCF/BED files.
 
 Designed to combined variant calls from peaked data with the reference genome. Returns the genomic sequence of the allele most present in the peak.
 
 Example Usage:
 
 """
+
 import ed_tools
 
 
@@ -16,4 +18,5 @@ py_ed_tool = py_ed_tool.sequence(
     vcf="/project/Wellcome_Discovery/esanders/code/SkewStructure/gatk_atac/gatk-snp-indel.vcf.gz"
 )
 sequences = py_ed_tool.sequences
+
 """
