@@ -6,7 +6,7 @@ Designed to combined variant calls from peaked data with the reference genome. R
 
 Example Usage:
 
-"""
+```
 
 import ed_tools
 
@@ -19,4 +19,4 @@ py_ed_tool = py_ed_tool.sequence(
 )
 sequences = py_ed_tool.sequences
 
-"""
+```
