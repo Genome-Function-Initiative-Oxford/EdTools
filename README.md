@@ -20,3 +20,10 @@ py_ed_tool = py_ed_tool.sequence(
 sequences = py_ed_tool.sequences
 
 ```
+
+To run the unittests please run:
+
+```
+cd ed_tools
+python -m unittest discover
+```
