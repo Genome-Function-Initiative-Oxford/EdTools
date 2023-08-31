@@ -22,7 +22,7 @@ class EdTool(object):
         self.regions = [re.split(':|-|\t', x.strip("\n")) for x in open(regions).readlines()]
         self.regions = [(x[0], int(x[1]), int(x[2])) for x in self.regions]
         self.sequences = None  # list of sequences
-
+        
     def sequence(self, fi, vcf=None, sample=None):
         genome_file = pysam.FastaFile(fi)
         variant_file = pysam.VariantFile(vcf) if vcf else FakeVariantFile()
