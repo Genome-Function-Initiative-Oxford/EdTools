@@ -7,9 +7,7 @@ Designed to combined variant calls from peaked data with the reference genome. R
 Example Usage:
 
 ```
-
 import ed_tools
-
 
 py_ed_tool = ed_tools.EdTool("/<path>/analysis_regions.txt")
 
@@ -18,7 +16,6 @@ py_ed_tool = py_ed_tool.sequence(
     vcf="/<path>/gatk-snp-indel.vcf.gz"
 )
 sequences = py_ed_tool.sequences
-
 ```
 
 To run the unittests please run:
