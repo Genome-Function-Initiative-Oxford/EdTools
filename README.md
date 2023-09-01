@@ -11,11 +11,11 @@ Example Usage:
 import ed_tools
 
 
-py_ed_tool = ed_tools.EdTool("/project/Wellcome_Discovery/esanders/fake_fastq/analysis_regions.txt")
+py_ed_tool = ed_tools.EdTool("/<path>/analysis_regions.txt")
 
 py_ed_tool = py_ed_tool.sequence(
-    fi= "/project/Wellcome_Discovery/shared/whole_genome_fasta/hg38/genome.fa",
-    vcf="/project/Wellcome_Discovery/esanders/code/SkewStructure/gatk_atac/gatk-snp-indel.vcf.gz"
+    fi= "/<path>/genome.fa",
+    vcf="/<path>/gatk-snp-indel.vcf.gz"
 )
 sequences = py_ed_tool.sequences
 
