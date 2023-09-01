@@ -2,7 +2,7 @@ import pysam
 import os
 
 from unittest import TestCase
-from ed_tools import EdTool
+from eds_tools import EdsTool
 from pysam import VariantFile, FastaFile, VariantHeader, tabix_index, FastaFile
 from tempfile import TemporaryDirectory
 
@@ -10,7 +10,7 @@ from tempfile import TemporaryDirectory
 
 class TryTesting(TestCase):
     def test_with_snps_and_indel(self):
-        sample_name = "ED_TOOL"
+        sample_name = "EDS_TOOL"
         
         vcfh = VariantHeader()
         vcfh.add_meta('contig', items=[('ID', "chr1"), ("assembly", "hg38"), ("species", "Homo Sapiens")])
@@ -58,12 +58,12 @@ class TryTesting(TestCase):
             
             genome_file = FastaFile(genome_filepath)
             
-            py_ed_tool = EdTool(regions_filepath)
+            py_eds_tool = EdsTool(regions_filepath)
 
-            py_ed_tool = py_ed_tool.sequence(
+            py_eds_tool = py_eds_tool.sequence(
                 fi= genome_filepath,
                 vcf=vcf_filename
             )
-            sequences = py_ed_tool.sequences
+            sequences = py_eds_tool.sequences
             self.assertEqual(sequences[0], "TTGACCCTGAA")
 

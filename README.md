@@ -1,4 +1,4 @@
-# EDTools -- EvolvedDevelopmentTools
+# EDSTools -- EvolvedDevelopmentSequenceTools
 
 BEDTools style repository for passing VCF/BED files.
 
@@ -7,20 +7,20 @@ Designed to combined variant calls from peaked data with the reference genome. R
 Example Usage:
 
 ```
-import ed_tools
+import eds_tools
 
-py_ed_tool = ed_tools.EdTool("/<path>/analysis_regions.txt")
+py_eds_tool = eds_tools.EdsTool("/<path>/analysis_regions.txt")
 
-py_ed_tool = py_ed_tool.sequence(
+py_eds_tool = py_eds_tool.sequence(
     fi= "/<path>/genome.fa",
     vcf="/<path>/gatk-snp-indel.vcf.gz"
 )
-sequences = py_ed_tool.sequences
+sequences = py_eds_tool.sequences
 ```
 
 To run the unittests please run:
 
 ```
-cd ed_tools
+cd eds_tools
 python -m unittest discover
 ```

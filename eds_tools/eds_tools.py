@@ -17,7 +17,7 @@ class FakeVariantFile(object):
         return []
 
 
-class EdTool(object):
+class EdsTool(object):
     def __init__(self, regions):
         with open(regions) as regions_fp:
             self.regions = [re.split(':|-|\t', x.strip("\n")) for x in regions_fp.readlines()]
